@@ -19,6 +19,12 @@ public class AccursedLangGen extends FabricLanguageProvider {
         translationBuilder.add(AccursedEtchings.CARVE.key(), "Carve");
         translationBuilder.add(AccursedEtchings.CARVE.key() + ".desc", "Allows for the Hatchet to be thrown.");
 
+        translationBuilder.add(AccursedEtchings.BLAZE.key(), "Blaze");
+        translationBuilder.add(AccursedEtchings.BLAZE.key() + ".desc", "Sets attacked enemies on fire.");
+
+        translationBuilder.add(AccursedEtchings.VANITY.key(), "Vanity");
+        translationBuilder.add(AccursedEtchings.VANITY.key() + ".desc", "Regains some hunger and saturation with each hit.");
+
         translationBuilder.add("text.accursed.empty", "Etchingless");
     }
 }

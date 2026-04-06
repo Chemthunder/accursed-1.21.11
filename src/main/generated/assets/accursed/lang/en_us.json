@@ -1,6 +1,10 @@
 {
+  "etching.accursed.blaze": "Blaze",
+  "etching.accursed.blaze.desc": "Sets attacked enemies on fire.",
   "etching.accursed.carve": "Carve",
   "etching.accursed.carve.desc": "Allows for the Hatchet to be thrown.",
+  "etching.accursed.vanity": "Vanity",
+  "etching.accursed.vanity.desc": "Regains some hunger and saturation with each hit.",
   "item.accursed.twisted_hatchet": "Twisted Hatchet",
   "text.accursed.empty": "Etchingless"
 }
