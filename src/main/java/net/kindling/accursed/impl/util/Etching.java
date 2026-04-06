@@ -2,6 +2,8 @@ package net.kindling.accursed.impl.util;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
+import net.kindling.accursed.impl.index.AccursedDataComponents;
+import net.kindling.accursed.impl.index.AccursedEtchings;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;

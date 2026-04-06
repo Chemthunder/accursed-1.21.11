@@ -16,6 +16,9 @@ public class AccursedLangGen extends FabricLanguageProvider {
     public void generateTranslations(RegistryWrapper.WrapperLookup wrapperLookup, TranslationBuilder translationBuilder) {
         AccursedItems.ITEMS.registerLang(wrapperLookup, translationBuilder);
 
-        translationBuilder.add(AccursedEtchings.EMPTY.key(), "Empty");
+        translationBuilder.add(AccursedEtchings.CARVE.key(), "Carve");
+        translationBuilder.add(AccursedEtchings.CARVE.key() + ".desc", "Allows for the Hatchet to be thrown.");
+
+        translationBuilder.add("text.accursed.empty", "Etchingless");
     }
 }
