@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "package": "net.kindling.accursed.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "plugin": "net.kindling.accursed.impl.util.AccursedMixinPlugin",
+  "mixins": [
+    "ExampleMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  }
+}
