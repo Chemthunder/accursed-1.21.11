@@ -1,36 +1,19 @@
 package net.kindling.accursed.impl.index;
 
+import net.kindling.accursed.compat.acornlib.EtchingRegistrant;
+import net.kindling.accursed.impl.Accursed;
 import net.kindling.accursed.impl.util.Etching;
-import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
-
-import java.util.ArrayList;
-import java.util.List;
+import net.minecraft.sound.SoundEvents;
 
 public interface AccursedEtchings {
-    List<Etching> ETCHINGS = new ArrayList<>();
+    EtchingRegistrant ETCHINGS = new EtchingRegistrant(Accursed.MOD_ID);
 
-    Etching EMPTY = create("empty", Ingredient.ofItem(Items.BEDROCK), 0xFFffffff);
-    Etching CARVE = create("carve", Ingredient.ofItem(Items.SPRUCE_WOOD), 0xFFC6FC6F);
-    Etching BLAZE = create("blaze", Ingredient.ofItem(Items.BLAZE_POWDER), 0xFFdb8442);
-    Etching VANITY = create("vanity", Ingredient.ofItem(Items.BEEF), 0xFFff6691);
-
-    static Etching create(String key, Ingredient item, int color) {
-        Etching etching = new Etching("etching.accursed." + key, item, color);
-
-        ETCHINGS.add(etching);
-        return etching;
-    }
-
-    static boolean isIngredient(Ingredient item) {
-        for (Etching et : ETCHINGS) {
-            if (et.itemNeededToCraft().equals(item)) {
-                return true;
-            }
-        }
-        return false;
-    }
+    Etching EMPTY = ETCHINGS.register("empty", Ingredient.ofItem(Items.BEDROCK), 0xFFffffff, SoundEvents.BLOCK_BAMBOO_WOOD_BREAK);
+    Etching CARVE = ETCHINGS.register("carve", Ingredient.ofItem(Items.SPRUCE_WOOD), 0xFFC6FC6F, SoundEvents.BLOCK_IRON_STEP);
+    Etching BLAZE = ETCHINGS.register("blaze", Ingredient.ofItem(Items.BLAZE_POWDER), 0xFFdb8442, SoundEvents.ENTITY_BLAZE_SHOOT);
+    Etching VANITY = ETCHINGS.register("vanity", Ingredient.ofItem(Items.BEEF), 0xFFff6691, SoundEvents.BLOCK_MANGROVE_ROOTS_BREAK);
 
     static void init() {}
 }

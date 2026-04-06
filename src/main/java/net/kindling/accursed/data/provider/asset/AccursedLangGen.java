@@ -15,15 +15,13 @@ public class AccursedLangGen extends FabricLanguageProvider {
 
     public void generateTranslations(RegistryWrapper.WrapperLookup wrapperLookup, TranslationBuilder translationBuilder) {
         AccursedItems.ITEMS.registerLang(wrapperLookup, translationBuilder);
+        AccursedEtchings.ETCHINGS.registerLang(wrapperLookup, translationBuilder);
 
-        translationBuilder.add(AccursedEtchings.CARVE.key(), "Carve");
+        translationBuilder.add("itemGroup.accursed", "Accursed");
+
         translationBuilder.add(AccursedEtchings.CARVE.key() + ".desc", "Allows for the Hatchet to be thrown.");
-
-        translationBuilder.add(AccursedEtchings.BLAZE.key(), "Blaze");
         translationBuilder.add(AccursedEtchings.BLAZE.key() + ".desc", "Sets attacked enemies on fire.");
-
-        translationBuilder.add(AccursedEtchings.VANITY.key(), "Vanity");
-        translationBuilder.add(AccursedEtchings.VANITY.key() + ".desc", "Regains some hunger and saturation with each hit.");
+        translationBuilder.add(AccursedEtchings.VANITY.key() + ".desc", "Mob drops have a chance to be doubled, or even tripled.");
 
         translationBuilder.add("text.accursed.empty", "Etchingless");
     }

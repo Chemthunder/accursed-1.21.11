@@ -6,6 +6,7 @@ import net.kindling.accursed.impl.index.AccursedItems;
 import net.minecraft.client.data.BlockStateModelGenerator;
 import net.minecraft.client.data.ItemModelGenerator;
 import net.minecraft.client.data.Models;
+import net.minecraft.item.Item;
 
 public class AccursedModelGen extends FabricModelProvider {
     public AccursedModelGen(FabricDataOutput output) {
@@ -16,5 +17,11 @@ public class AccursedModelGen extends FabricModelProvider {
 
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(AccursedItems.TWISTED_HATCHET, Models.HANDHELD);
+
+        for (Item item : AccursedItems.ITEMS.toRegister) {
+            if (item != AccursedItems.TWISTED_HATCHET) {
+                itemModelGenerator.register(item, Models.GENERATED);
+            }
+        }
     }
 }
